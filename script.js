@@ -3,31 +3,36 @@ function getComputerChoice() {
   let choice
   switch (gameOption) {
     case 0:
-      return choice = "rock";
+      return choice = "Rock";
       break;
     case 1:
-      return choice = "paper";
+      return choice = "Paper";
       break;
     case 2:
-      return choice = "scissors";
+      return choice = "Scissors";
   }
 }
 
 function playerSelection() {
   let choice = prompt("Please choose rock, paper, or scissors").toLowerCase();
-  return choice;
+  formattedChoice = capitalize(choice)
+  return formattedChoice;
+}
+
+function capitalize(word) {
+  return word[0].toUpperCase() + word.slice(1);
 }
 
 function playRound(playerChoice,computerChoice) {
   switch (playerChoice + computerChoice) {
-    case "rockpaper":
-    case "scissorsrock":
-    case "paperscissors":
+    case "RockPaper":
+    case "ScissorsRock":
+    case "PaperScissors":
       return "lost";
       break;
-    case "scissorspaper":
-    case "paperrock":
-    case "rockscissors":
+    case "ScissorsPaper":
+    case "PaperRock":
+    case "RockScissors":
       return "won";
       break;
     default:
