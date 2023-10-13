@@ -1,5 +1,5 @@
 function getComputerChoice() {
-  gameOption = Math.floor((Math.random) * 3);
+  let gameOption = Math.floor((Math.random) * 3);
   switch (gameOption) {
     case 0:
       choice = "rock";
@@ -12,3 +12,26 @@ function getComputerChoice() {
   }
   return choice
 }
+
+function playerSelection() {
+  let choice = prompt("Please choose rock, paper, or scissors").toLowerCase();
+  return choice;
+}
+
+function playRound(playerChoice,computerChoice) {
+  switch (playerChoice + computerChoice) {
+    case "rockpaper":
+    case "scissorsrock":
+    case "paperscissors":
+      return "won";
+      break;
+    case "scissorspaper":
+    case "paperrock":
+    case "rockscissors":
+      return "lost";
+      break;
+    default:
+      return "tie"
+  }
+}
+
