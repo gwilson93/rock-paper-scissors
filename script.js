@@ -31,7 +31,40 @@ function playRound(playerChoice,computerChoice) {
       return "lost";
       break;
     default:
-      return "tie"
+      return "tie";
   }
 }
 
+function game() {
+  while (i < 5) {
+    let player = playerSelection();
+    let computer = getComputerChoice();
+    let result = playRound(player,computer);
+    let playerScore = 0
+    let computerScore = 0
+
+    if (result == "won"){
+      console.log(`You Won! ${player} beats ${computer}.`)
+      playerScore++
+    }
+    else if (result == "lost"){
+      console.log(`You Lost! ${computer} beats ${player}.`)
+      computerScore++
+    }
+    else {
+      console.log(`It's a tie! ${player} is the same as ${computer}.`)
+    }
+
+    i++
+  }
+
+  if (playerScore > computerScore) {
+    console.log(`You Won! The final score is ${playerScore} - ${computerScore}.`)
+  }
+  else if (playerScore < computerScore) {
+    console.log(`You Lost! The final score is ${playerScore} - ${computerScore}.`)
+  }
+  else {
+    console.log(`You Tied! The final score is ${playerScore} - ${computerScore}.`)
+  }
+}
