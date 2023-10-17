@@ -18,10 +18,61 @@
   --rock-2: hsl(349, 70%, 56%);
 }
 
-/* CSS Resets */
+/* CSS Resets and Background */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body  {
+  font-family: "Barlow Semi Condensed",sans-serif;
+  background: radial-gradient(at top, var(--bg-grad-1), var(--bg-grad-2));
+  min-height: 100vh;
+}
+
+/* Header */
+.container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  border: 3px solid var(--outline);
+  border-radius: 20px;
+  padding: 1rem 1.4rem 1rem 2rem;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 150px;
+  height: 100%;
+  line-height: 1;
+}
+
+.score_title {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: var(--score-text);
+}
+
+.score_number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--dark-text);
+}
