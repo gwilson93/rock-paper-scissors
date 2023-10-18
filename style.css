@@ -27,7 +27,7 @@
   box-sizing: border-box;
 }
 
-body  {
+body {
   font-family: "Barlow Semi Condensed",sans-serif;
   background: radial-gradient(at top, var(--bg-grad-1), var(--bg-grad-2));
   min-height: 100vh;
@@ -112,8 +112,8 @@ body  {
 
 .choice {
   position: relative;
-  width: 10rem;
-  height: 10rem;
+  width: 7.5rem;
+  height: 7.5rem;
   background-color: white;
   border-radius: 50%;
   display: grid;
@@ -145,7 +145,7 @@ body  {
 }
 
 .choice img {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .choice.paper::before{
@@ -173,4 +173,43 @@ body  {
 
 .choice-btn[data-choice="rock"] {
   grid-area: rock;
+}
+
+/* Rules Button */
+.rules-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  background: transparent;
+  outline: none;
+  border: 2px solid var(--outline);
+  border-radius: .6rem;
+  color: var(--light-text);
+  padding: 0.6rem 2.5rem;
+  font-family: inherit;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.rules-btn:focus {
+  border: 2px solid  white;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.attribution {
+  font-size: 12px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
