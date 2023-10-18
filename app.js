@@ -1,3 +1,17 @@
+// DOM
+const btnrules = document.querySelector(".rules-btn")
+const btnclose = document.querySelector(".close-btn")
+const modalRules = document.querySelector(".modal")
+
+// Show/Hide Rules
+btnrules.addEventListener('click', ()=>{
+  modalRules.classList.toggle("show-modal")
+})
+btnclose.addEventListener('click', ()=>{
+  modalRules.classList.toggle("show-modal")
+})
+
+
 function getComputerChoice() {
   let gameOption = Math.floor(Math.random() * 3);
   let choice
@@ -75,4 +89,4 @@ function game() {
   }
 }
 
-game()
+// game()
